@@ -6,7 +6,7 @@ googleAnalytics: ''
 disqusShortname: ''
 params:
   banner:
-    buttonText: Welcome to my blog!
+    buttonText: Welcome to Vrinda's blog!
     subtitle: UNDERSTANDING THE STARTING
       #A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP
       #AND RELEASED UNDER THE CREATIVE COMMONS.
@@ -19,7 +19,7 @@ params:
         street: Glentworth Street
         title: Address
     buttonClear: Clear
-    buttonSend: Send message
+    buttonSend: Tell me what you think!
     email:
       - email: vrindagupta66@gmail.com
         title: Email
@@ -27,9 +27,6 @@ params:
     phone:
       - phone: (+44) 7760826659
         title: Phone
-    image:
-      - file: "https://www.webnode.com/blog/wp-content/uploads/2019/04/blog2.png"
-        title: Author
   custom_css: []
   custom_js: []
   description: Your description
@@ -41,9 +38,9 @@ params:
     copyright: Vrinda's Blog
     enable: yes
     quicklinks:
-      - alt: HTML5 UP
-        text: 'Design: '
-        url: https://www.html5up.net
+      - alt: CLICK FOR FULL BLOG
+        text: 'More like this: '
+        url: https://www.vrindagupta66.wordpress.com
     social:
       - icon: fa-twitter
         label: Twitter
