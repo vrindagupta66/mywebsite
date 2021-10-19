@@ -7,7 +7,7 @@ disqusShortname: ''
 params:
   banner:
     buttonText: Welcome to my blog!
-    subtitle: |- Let's read!
+    subtitle: Let's read!
       #A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP
       #AND RELEASED UNDER THE CREATIVE COMMONS.
     title: Hi, my name is Vrinda Gupta! 
@@ -27,6 +27,9 @@ params:
     phone:
       - phone: (+44) 7760826659
         title: Phone
+    image:
+      - file: "https://www.webnode.com/blog/wp-content/uploads/2019/04/blog2.png"
+        title: Author
   custom_css: []
   custom_js: []
   description: Your description
