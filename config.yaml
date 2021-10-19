@@ -1,4 +1,4 @@
-baseURL: https://kostis-portfolio.netlify.app/
+baseURL: https://vrinda-gupta-blog.netlify.app/
 languageCode: en-us
 title: Portfolio website for Kostis Christodoulou
 theme: forty
@@ -7,10 +7,10 @@ disqusShortname: ''
 params:
   banner:
     buttonText: Welcome to my blog!
-    subtitle: Let's read!
+    subtitle: UNDERSTANDING THE STARTING
       #A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP
       #AND RELEASED UNDER THE CREATIVE COMMONS.
-    title: Hi, my name is Vrinda Gupta! 
+    title: SOUL FOOD FOR SIMPLISTS
   blog: {}
   contact:
     address:
@@ -47,10 +47,10 @@ params:
     social:
       - icon: fa-twitter
         label: Twitter
-        url: https://twitter.com/vrindagupta66
-      #- icon: fa-facebook
-        #label: Facebook
-       # url: https://www.facebook.com
+        url: https://twitter.com/vrindagupta66/
+      - icon: fa-wordpress
+        label: Wordpress
+        url: https://vrindagupta66.wordpress.com/
       #- icon: fa-instagram
        # label: Instagram
        # url: https://www.instagram.com
@@ -60,8 +60,8 @@ params:
       - icon: fa-linkedin
         label: LinkedIn
         url: https://www.linkedin.com/in/vrindagupta66/
-  image: ''
-  name: Your name
+  image: 'IMG_4835'
+  name: Vrinda Gupta
   navigation:
     button1:
       - name: Get Started
