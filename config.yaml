@@ -65,30 +65,30 @@ params:
         url: blogs
     button2:
       - name: Log In
-        url: '#'
+        url: 'https://app.netlify.com/login/email'
     links:
       - name: Home
-        url: '#'
+        url: 'https://vrinda-gupta-blog.netlify.app/'
       - name: Blogs
         url: blogs
-      - name: Generic Blog
-        url: blogs/ipsum
-      - name: Elements
-        url: elements.html
+      #- name: Generic Blog
+       # url: blogs/ipsum
+     # - name: Elements
+      #  url: elements.html
     menu: Menu
-    subtitle: By HTML5 Up
-    title: Forty
+    subtitle: By Vrinda Gupta
+    title: Creative Nonfiction
   tiles:
     enable: yes
     showcase:
-      - image: pic01.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Aliquam
-        url: blogs/aliquam
-      - image: pic02.jpg
-        subtitle: Feugiat Amet Tempus
-        title: Tempus
-        url: blogs/tempus
+      - image: lbs.jpg
+        subtitle: analysing returns
+        title: DJIA Top 30 Stocks
+        url: blogs/risk_return
+      - image: pic07.jpg
+        subtitle: what it means to encourage a culture of giving
+        title: Is it still charity if you brag about it?
+        url: blogs/charity
       - image: pic03.jpg
         subtitle: Lorem Etiam Nullam
         title: Magna

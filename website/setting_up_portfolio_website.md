@@ -83,7 +83,7 @@
     - git pull
     - git push
 
-12. To change the background pictures of the tiles, save any jpg/jpeg/png files you want in the `\themes\forty\static\img` folder. I have saved an LBS pic, called `lbs.jpg` in this directory, so please copy lbs.jpg to the `\themes\forty\static\img` folder. Then change `config.yaml` and to make the first tile picture be one ob LBS and not of NYC at night, change line 84 from `pic01.jpg` to `lbs.jpg`
+12. To change the background pictures of the tiles, save any jpg/jpeg/png files you want in the `\themes\forty\static\img` folder. I have saved an LBS pic, called `lbs.jpg` in this directory, so please copy lbs.jpg to the `\themes\forty\static\img` folder. Then change `config.yaml` and to make the first tile picture be one of LBS and not of NYC at night, change line 84 from `pic01.jpg` to `lbs.jpg`
 
 13. Currently all tiles go to markdown (.md) documents. But what if we wanted to use an Rmd? I have saved one in this folder, `risk_return.Rmd`, but please copy it under `content/blogs`. It is a normal Rmd, the only difference is the front matter, the first 13 lines. In there, I have made the following changes
 
@@ -93,7 +93,7 @@
 
 14. If you want to add another picture `pic1.jpg` anywhere in the Rmd, make sure you save the picture in `\static\img` and insert a chunk of code as follows:
 
-```
+```{r, image}
 knitr::include_graphics("/img/pic1.jpg",error =FALSE)
 ```
 
