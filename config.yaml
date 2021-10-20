@@ -9,7 +9,7 @@ params:
     buttonText: Welcome to Vrinda's blog!
     subtitle: UNDERSTANDING THE STARTING
       #A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP
-      #AND RELEASED UNDER THE CREATIVE COMMONS.
+      ##
     title: SOUL FOOD FOR SIMPLISTS
   blog: {}
   contact:
@@ -57,7 +57,7 @@ params:
       - icon: fa-linkedin
         label: LinkedIn
         url: https://www.linkedin.com/in/vrindagupta66/
-  image: 'IMG_4835'
+      - image: pic02
   name: Vrinda Gupta
   navigation:
     button1:
@@ -89,14 +89,14 @@ params:
         subtitle: what it means to encourage a culture of giving
         title: Is it still charity if you brag about it?
         url: blogs/charity
-      - image: pic03.jpg
-        subtitle: Lorem Etiam Nullam
-        title: Magna
-        url: blogs/magna
-      - image: pic04.jpg
-        subtitle: Nisl Sed Aliquam
-        title: Ipsum
-        url: blogs/ipsum
+      - image: pic08.jpg
+        subtitle: Good Vibes Only
+        title: How can we turn bad vibes to good vibes?
+        url: blogs/vibe
+      - image: pic09.jpeg
+        subtitle: Was their house their home?
+        title: A familiarity in disapproval
+        url: blogs/thehouse
       - image: pic05.jpg
         subtitle: Ipsum Dolor Sit Amet
         title: Consequat
@@ -104,15 +104,15 @@ params:
       - image: pic06.jpg
         subtitle: Feugiat Amet Tempus
         title: Etiam
-        url: blogs/ipsum
+        url: blogs/index
   two:
-    buttonText: Get Started
+    buttonText: Get To Know Vrinda
     enable: yes
-    subtitle: "Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero.
-      \r\n    Mauris aliquet magna magna sed nunc rhoncus pharetra. \r\n    Pellentesque
-      condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia
+    subtitle: "Vrinda is a student of Finance at London Business School. She was 
+      \r\n    born and brought up in a small north-Indian town named Saharanpur. \r\n   
+      In her free time, Vrinda likes writing creating nonfiction.
       pellentesque lorem ipsum dolor. \r\n    Nullam et orci eu lorem consequat tincidunt.
       Vivamus et sagittis libero.\r\n    Mauris aliquet magna magna sed nunc rhoncus
       amet pharetra et feugiat tempus."
-    title: Massa libero
-    url: blogs
+    title: About The Author
+    url: blogs/more_about_the_author
