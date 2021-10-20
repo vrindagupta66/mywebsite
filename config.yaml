@@ -110,9 +110,6 @@ params:
     enable: yes
     subtitle: "Vrinda is a student of Finance at London Business School. She was 
       \r\n    born and brought up in a small north-Indian town named Saharanpur. \r\n   
-      In her free time, Vrinda likes writing creating nonfiction.
-      pellentesque lorem ipsum dolor. \r\n    Nullam et orci eu lorem consequat tincidunt.
-      Vivamus et sagittis libero.\r\n    Mauris aliquet magna magna sed nunc rhoncus
-      amet pharetra et feugiat tempus."
+      In her free time, Vrinda likes writing creating nonfiction."
     title: About the Author
     url: blogs/more_about_the_author

@@ -16,11 +16,27 @@ title: "Analysing Movies"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)
+library(mosaic)
+library(ggthemes)
+library(lubridate)
+library(fivethirtyeight)
+library(here)
+library(skimr)
+library(janitor)
+library(vroom)
+library(tidyquant)
+library(rvest)
+library(kableExtra)
+```
+
 # Analysis of movies- IMDB dataset
 
 We will look at a subset sample of movies, taken from the [Kaggle IMDB 5000 movie dataset](https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset)
 
 ```{r,load_movies, warning=FALSE, message=FALSE}
+
 movies <- read_csv(here::here("data", "movies.csv"))
 glimpse(movies)
 ```
