@@ -9,7 +9,7 @@ image: me.jpg
 keywords: ""
 slug: more_about_the_author
 title: Vrinda Gupta
-subtitle: She loves writing
+subtitle: This blog is a summation of Vrinda's R homework, and her wordpress blog articles. Thank you for reading!
 ---
 
 EDUCATION

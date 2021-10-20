@@ -3,7 +3,7 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:26:13-05:00"
-description: making life easier
+description: An excerpt on how to convert bad vibes into good vibes, for making life easier
 draft: false
 image: pic15.jpg
 keywords: ""
@@ -11,16 +11,11 @@ slug: vibe
 title: HOW TO MAKE A BAD VIBE A GOOD VIBE
 ---
 Most of us are familiar with the idea of bad vibes but we don’t know how to avoid these bad vibes. I am a very helplessly transparent person and every time something in my vicinity gives me bad vibes, my expressions and body language make my disdain very evident. It’s times like these that make it imperative for me to ensure that I handle vibes in a better manner. Here is a little bit of what I’ve learnt while trying to be a pleasant human to be around. A bad vibe could be attached to an:
-
-1) Object
-
-2) Time
-
-3) Place
-
-4) Situation
-
-5) Human
+- Object
+- Time
+- Place
+- Situation
+- Human
 
 Although undoubtedly human acrimony is the worst. The cause for this is the power of human connection. It surpasses connections with objects and particular times, places and situations. The fulfilment and warmth that a human connection can provide is much more than anything an object or place could provide in times of need. And since the good vibe of a human connection is more extreme, the bad vibe can also prove to be the worst. Probably why famous classics speak so often about archenemies falling in love, and lovers becoming archenemies. But before getting into how we can avoid human acrimony, let’s understand all the others.
 

@@ -3,7 +3,7 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:26:09-05:00"
-description: Article on Charity
+description: At a time like this when charitable acts performed by strangers are saving the day for many, I am penning down my thoughts on charity, and what it means to encourage a culture of giving. 
 draft: false
 image: pic17.jpg
 keywords: ""
