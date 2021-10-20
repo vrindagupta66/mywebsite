@@ -3,7 +3,7 @@ categories:
 - ""
 - ""
 date: "2021-09-30"
-description: Risk-Return of DJIA stocks
+description: This is an analysis of the risk and return of DJIA stocks conducted using R.
 draft: false
 image: spices.jpg
 keywords: ""

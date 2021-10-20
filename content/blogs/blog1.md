@@ -3,13 +3,12 @@ categories:
 - ""
 - ""
 date: "2017-10-31T21:28:43-05:00"
-description: ""
+description: This blog is a summation of Vrinda's R homework, and her wordpress account articles. Thank you for reading!
 draft: false
 image: me.jpg
 keywords: ""
 slug: more_about_the_author
 title: Vrinda Gupta
-subtitle: This blog is a summation of Vrinda's R homework, and her wordpress blog articles. Thank you for reading!
 ---
 
 EDUCATION

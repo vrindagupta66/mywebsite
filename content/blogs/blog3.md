@@ -3,7 +3,7 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:26:13-05:00"
-description: An excerpt on how to convert bad vibes into good vibes, for making life easier
+description: An excerpt on how to convert bad vibes into good vibes, for making life easier.
 draft: false
 image: pic15.jpg
 keywords: ""
