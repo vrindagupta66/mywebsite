@@ -1,0 +1,166 @@
+---
+categories:
+- ""
+- ""
+date: "2019-10-31"
+description: "Movies Homework"
+draft: false
+image: movies.jpg
+keywords: ""
+slug: movies
+title: "Analysing Movies"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Analysis of movies- IMDB dataset
+
+We will look at a subset sample of movies, taken from the [Kaggle IMDB 5000 movie dataset](https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset)
+
+```{r,load_movies, warning=FALSE, message=FALSE}
+movies <- read_csv(here::here("data", "movies.csv"))
+glimpse(movies)
+```
+
+Besides the obvious variables of `title`, `genre`, `director`, `year`, and `duration`, the rest of the variables are as follows:
+
+-   `gross` : The gross earnings in the US box office, not adjusted for inflation
+-   `budget`: The movie's budget
+-   `cast_facebook_likes`: the number of facebook likes cast members received
+-   `votes`: the number of people who voted for (or rated) the movie in IMDB
+-   `reviews`: the number of reviews for that movie
+-   `rating`: IMDB average rating
+
+## Are there any missing values (NAs)? Are all entries distinct or are there duplicate entries?
+
+**Answer:** From the below we can see that there are no missing values. There are duplicates since there are 2907 unique titles but 2961 entries.
+
+```{r,missing entries movies}
+movies %>%
+skimr::skim()
+```
+
+## Produce a table with the count of movies by genre, ranked in descending order
+
+```{r, genre table movies}
+movies%>%
+  count(genre, sort=TRUE) %>%
+  kable()
+```
+
+## Produce a table with the average gross earning and budget (`gross` and `budget`) by genre.
+
+Calculate a variable `return_on_budget`. This shows how many \$ did a movie make at the box office for each \$ of its budget. Ranked genres by this `return_on_budget` in descending order.
+
+```{r, earning table movies}
+movies%>%
+  group_by(genre)%>%
+  summarise(avg_gross_earning=mean(gross), avg_budget=mean(budget))%>%
+  mutate(return_on_budget=avg_gross_earning/avg_budget)%>%
+  arrange(desc(return_on_budget)) %>%
+  kable()
+```
+
+## Produce a table that shows the top 15 directors who have created the highest gross revenue in the box office.
+
+Don't just show the total gross amount, but also the mean, median, and standard deviation per director.
+
+```{r, directors table movies}
+movies%>%
+  group_by(director) %>%
+  summarise(total_gross=sum(gross), avg_gross_earning=mean(gross), median_gross_earning=median(gross), sd_gross_earning=sd(gross)) %>%
+  arrange(desc(total_gross))%>%
+  head(15) %>%
+  kable()
+```
+
+## Produce a table that describes how ratings are distributed by genre.
+
+```{r, ratings table 1 movies}
+movies %>%
+  group_by(genre) %>%
+  summarise(mean_ratings=mean(rating), min_ratings=min(rating), max_ratings=max(rating), sd_ratings=sd(rating)) %>%
+  arrange(desc(mean_ratings)) %>%
+  kable()
+```
+
+## A histogram or density graph that visually shows how ratings are distributed.
+
+```{r, ratings table 2 movies}
+
+t = movies%>%
+  arrange(desc(rating))
+
+x <- data.frame(density(t$rating)[c("x", "y")])
+quantile(x$x, probs =  c(.25, .40, .60,.75))
+
+ ggplot(x, aes(x, y)) + geom_area(data =  subset(x, x < 3.26), fill = "pink") +
+      geom_area(data = subset(x, x < 4.57), fill = "red") +
+      geom_area(data = subset(x, x > 6.33), fill = "lightgreen") +
+      geom_area(data = subset(x, x > 7.64), fill = "green") +
+      geom_line()+
+      labs(title="Distribution of ratings", x="Rating from 1 to 10", y="", subtitle= "Percentiles: 25%, 40%, 60%, and 75%")
+```
+
+## Examine the relationship between `gross` and `cast_facebook_likes`.
+
+Produce a scatterplot and write one sentence discussing whether the number of facebook likes that the cast has received is likely to be a good predictor of how much money a movie will make at the box office. What variable are you going to map to the Y- and X- axes?
+
+```{r, gross_on_fblikes}
+ggplot(movies, aes(y=gross/1000000, x =cast_facebook_likes, alpha=5/10))+
+  geom_point()+
+  xlim(0,150000)+
+  ylim(0,400)+
+  geom_smooth(method = lm)+
+  theme(legend.position = "none")+
+  labs(title= "Gross vs number of Facebook likes", x="Number of likes on Facebook", y="Gross in millions" )
+
+cor(movies$gross, movies$cast_facebook_likes)
+```
+
+**Answer:** Since gross earning is our output variable and number of likes on Facebook is our explanatory variable, the former is plotted on the y-axis while the latter is plotted on the x-axis.
+
+From the above scatter plot, we can map a linear positive relationship between the X and the Y variables. The correlation is positive, and the coefficient of 0.213 depicts only a moderate relationship. However, as correlation coefficients do not give an indication of causation, we would need to investigate the explanatory power of facebook likes on gross revenue through further statistical tests.
+
+## Examine the relationship between `gross` and `budget`.
+
+Produce a scatterplot and write one sentence discussing whether budget is likely to be a good predictor of how much money a movie will make at the box office.
+
+```{r, gross_on_budget}
+ggplot(movies, aes(y=gross/1000000, x =budget, alpha=5/10))+
+  geom_point()+
+  xlim(0,150000)+
+  ylim(0,30)+
+  geom_smooth(method = lm)+
+  theme(legend.position = "none")+
+  labs(title= "Gross vs Budget", x="Budget", y="Gross in millions" )
+
+cor(movies$gross, movies$budget)
+```
+
+**Answer:** The correlation coefficient between Gross Earnings and the Budget of the movies is 0.641, which depicts a positive relationship between the two variables. Since the coefficient is more than 0.5, we can say that higher budget movies have higher gross earnings. However, as correlation coefficients do not give an indication of causation, we would need to investigate the explanatory power of budget on gross revenue through further statistical tests.
+
+## Examine the relationship between `gross` and `rating`.
+
+Produce a scatterplot, faceted by `genre` and discuss whether IMDB ratings are likely to be a good predictor of how much money a movie will make at the box office. Is there anything strange in this dataset?
+
+```{r, gross_on_rating}
+ggplot(movies, aes(y=gross/1000000, x = rating))+
+ ylim(0,400)+
+  geom_point()+
+  facet_wrap(~ genre, ncol = 3)+ ##arranges graphs in 3 columns
+  labs(title= "Gross vs Rating by Genre", x="Rating", y="Gross in millions" )
+
+cor(movies$gross, movies$rating)
+```
+
+**Answer:** We notice that Gross Earnings and Rating have very varied relationships across genres. The most popular genres including - Action, Adventure, Drama - have positive relationships between Gross Earnings and Ratings. However, we noticed that the less popular genres including - Documentary, Fantasy, Horror, Family, Mystery - do not have obviously positive relationships. The relationships appear flat, implying that the gross earnings may not increase proportionately even with large increase in the ratings.
+
+# Details
+
+-   Who did you collaborate with: **Arman Topchu, Kaize Ying, Leonie Bick, Lorenz Freigassner, Tafadzwa Chinanzvavana, Yiyue Hu, Vrinda Gupta**
+
+-   Approximately how much time did you spend on this problem set: **20 hours**

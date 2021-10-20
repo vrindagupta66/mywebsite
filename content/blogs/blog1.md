@@ -12,4 +12,13 @@ title: Vrinda Gupta
 subtitle: She loves writing
 ---
 
-Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
+EDUCATION
+
+-  London Business School, London, United Kingdom
+-- Reading for Masters in Financial Analysis (MFA), Student Academic Rep (MFA) (2021 - 2023)
+
+- Shaheed Sukhdev College of Business Studies, University of Delhi, New Delhi, India
+-- BBA in Financial Investment Analysis - BBA(FIA) (2016 - 2019) 
+
+- Welham Girls’ School, Dehradun, India
+-- Indian School Certificate (XII): Business Studies, First Class Honours (2008 - 2016)
